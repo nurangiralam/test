@@ -1,112 +1,82 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   background: #f0f4f8;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
   margin: 0;
+  padding: 20px;
 }
-
-.container {
-  background: #fff;
-  padding: 20px 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  width: 350px;
-}
-
-h2 {
+nav {
   text-align: center;
-  color: #0077b6;
+  margin-bottom: 20px;
 }
-
-.input-area {
-  display: flex;
-  gap: 10px;
-}
-
-#taskInput {
-  flex-grow: 1;
-  padding: 8px;
-  border: 2px solid #0077b6;
-  border-radius: 8px;
-  outline: none;
-}
-
-#addBtn {
-  padding: 8px 12px;
+nav button {
+  margin: 5px;
+  padding: 10px 15px;
   border: none;
+  border-radius: 8px;
   background: #0077b6;
   color: white;
-  border-radius: 8px;
   cursor: pointer;
+  transition: 0.3s;
 }
-
-#addBtn:hover {
+nav button:hover {
   background: #0096c7;
 }
+.section { display: none; }
+.active { display: block; }
 
-.filters {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 15px;
+/* To-Do Styles */
+.todo-container {
+  background: #fff;
+  padding: 25px 35px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  width: 400px;
+  margin: auto;
 }
-
-.filters button {
-  flex: 1;
-  margin: 0 5px;
-  padding: 6px;
-  border: none;
-  border-radius: 8px;
-  background: #90e0ef;
-  cursor: pointer;
+.todo-container h2 { text-align: center; color: #0077b6; }
+.input-section { display: flex; gap: 10px; margin-bottom: 15px; }
+input {
+  flex: 1; padding: 10px; border: 1px solid #ccc; border-radius: 8px;
 }
-
-.filters button.active {
-  background: #0077b6;
-  color: white;
+button {
+  padding: 10px 15px; border: none; border-radius: 8px;
+  background: #0077b6; color: white; cursor: pointer; transition: 0.3s;
 }
-
-ul {
-  list-style: none;
-  padding: 0;
-  margin-top: 20px;
-}
-
+button:hover { background: #0096c7; }
+.filter-section { text-align: center; margin-bottom: 15px; }
+ul { list-style: none; padding: 0; margin: 0; }
 li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #f8f9fa;
-  margin-bottom: 10px;
-  padding: 10px;
-  border-radius: 8px;
-  transition: all 0.3s ease-in-out;
+  display: flex; justify-content: space-between; align-items: center;
+  background: #f8f9fa; margin-bottom: 8px; padding: 10px;
+  border-radius: 8px; transition: all 0.3s ease;
 }
-
-li.completed span {
-  text-decoration: line-through;
-  color: gray;
+li.completed span { text-decoration: line-through; color: #888; }
+.delete-btn {
+  background: #e63946; color: white; border: none;
+  padding: 5px 10px; border-radius: 6px; cursor: pointer;
 }
+.delete-btn:hover { background: #d62828; }
 
-.task-text {
-  flex-grow: 1;
-  margin-left: 8px;
+/* Quiz Styles */
+.quiz-container {
+  background: #fff;
+  padding: 25px 35px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  width: 400px;
+  text-align: center;
+  margin: auto;
 }
-
-.btn {
-  border: none;
-  background: none;
-  cursor: pointer;
-  font-size: 16px;
-  margin-left: 8px;
+.quiz-container h2 { color: #0077b6; margin-bottom: 20px; }
+.question { font-size: 18px; margin-bottom: 15px; }
+.options { text-align: left; }
+.options label {
+  display: block; margin: 8px 0; padding: 10px;
+  background: #f8f9fa; border-radius: 8px; cursor: pointer; transition: 0.3s;
 }
-
-.btn.complete { color: green; }
-.btn.delete { color: red; }
-
-li.removing {
-  opacity: 0;
-  transform: translateX(-20px);
-}
+.options label:hover { background: #dbeef3; }
+.hidden { display: none; }
+.timer { margin-top: 10px; font-weight: bold; color: #e63946; }
+.review { text-align: left; margin-top: 15px; }
+.result { font-size: 18px; margin-top: 20px; }
+.correct-answers { text-align: left; margin-top: 15px; }
